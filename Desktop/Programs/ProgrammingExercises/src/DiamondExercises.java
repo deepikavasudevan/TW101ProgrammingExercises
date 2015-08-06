@@ -22,8 +22,7 @@ class DiamondExercises {
       return n;
     }
 
-    void printsIsoscelesTriangle (int n) {
-        System.out.println ("\n------PRINTING ISOSCELES TRIANGLE OF ASTERISKS------\n");
+    void printIsoscelesTriangle (int n) {
 
         if (n<=0) {
             System.out.println("Invalid Input");
@@ -44,10 +43,41 @@ class DiamondExercises {
         }
     }
 
+    void printDownwardIsoscelesTriangle(int n) {
+
+        for (int i=n;i>=1;i--) {
+            //print the spaces
+            for (int j=(n+1);j>i;j--) {
+                System.out.print(" ");
+            }
+
+            //print the asterisks
+            for (int k=1; k<=(2*i-1); k++) {
+                System.out.print("*");
+            }
+        System.out.println();
+        }
+    }
+
+    void printCenteredDiamond (int n) {
+
+        DiamondExercises deTemp=new DiamondExercises();
+        deTemp.printIsoscelesTriangle(n);
+
+        deTemp.printDownwardIsoscelesTriangle(n-1);
+
+    }
     public static void main(String[] args) {
         DiamondExercises de1=new DiamondExercises();
 
+        //prints an Isosceles Triangle of n lines containing asterisks
+        System.out.println ("\n------PRINTING ISOSCELES TRIANGLE OF ASTERISKS------\n");
         int n=de1.getValueOfN();
-        de1.printsIsoscelesTriangle(n);
+        de1.printIsoscelesTriangle(n);
+
+        //prints Centered Diamond for given value of n
+        System.out.println ("\n------PRINTING CENTERED DIAMOND------\n");
+        n=de1.getValueOfN();
+        de1.printCenteredDiamond(n);
     }
 }
