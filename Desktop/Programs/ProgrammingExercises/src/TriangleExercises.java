@@ -72,14 +72,19 @@ class TriangleExercises {
 
     public static void main(String[] args) throws IOException {
         TriangleExercises te1=new TriangleExercises();
+
+        //prints one asterisk
         te1.printOneAsterisx();
 
+        //prints horizontal line of n asterisks
         int n=te1.getNumberOfAsterisx();
         te1.printHorizontalAsterisxs(n);
 
+        //prints vertical line of n asterisks
         n=te1.getNumberOfAsterisx();
         te1.printVerticalAsterisks(n);
 
+        //prints n lines of asterisks in the form of a right angles triangle
         n=te1.getNumberOfAsterisx();
         te1.printRightAngledTriangleAsterisks(n);
     }
