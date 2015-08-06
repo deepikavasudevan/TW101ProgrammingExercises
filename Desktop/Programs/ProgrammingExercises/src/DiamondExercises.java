@@ -67,6 +67,32 @@ class DiamondExercises {
         deTemp.printDownwardIsoscelesTriangle(n-1);
 
     }
+
+    void printCenteredDiamondWithName (int n) {
+        DiamondExercises deTemp=new DiamondExercises();
+        if (n<=0) {
+            System.out.println("Invalid Input");
+        }
+        else
+            for (int i=1;i<n;i++) {
+
+                //prints the spaces
+                for (int j=n;j>i;j--) {
+                    System.out.print(" ");
+                }
+
+                //prints the asterisks
+                for (int k=1;k<=(2*i-1);k++) {
+                    System.out.print("*");
+                }
+                System.out.println();
+            }
+
+        System.out.println ("Deepika");
+
+        deTemp.printDownwardIsoscelesTriangle(n-1);
+    }
+
     public static void main(String[] args) {
         DiamondExercises de1=new DiamondExercises();
 
@@ -79,5 +105,10 @@ class DiamondExercises {
         System.out.println ("\n------PRINTING CENTERED DIAMOND------\n");
         n=de1.getValueOfN();
         de1.printCenteredDiamond(n);
+
+        //prints Centered Diamond with a name in the middle line
+        System.out.println("\n------PRINTING CENTERED DIAMOND WITH NAME------\n");
+        n=de1.getValueOfN();
+        de1.printCenteredDiamondWithName(n);
     }
 }
