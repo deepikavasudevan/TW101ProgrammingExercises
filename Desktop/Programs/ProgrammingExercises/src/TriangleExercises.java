@@ -32,6 +32,7 @@ class TriangleExercises {
         System.out.println("\n------PRINTING N ASTERISXS HORIZONTALLY------\n");
         if (n<=0){
             System.out.println("Invalid Input");
+            System.exit(0);
         }
         else
         for (int noOfAsterisks=1;noOfAsterisks<=n;noOfAsterisks++) {

@@ -26,6 +26,7 @@ class DiamondExercises {
 
         if (n<=0) {
             System.out.println("Invalid Input");
+            System.exit(0);
         }
         else
         for (int noOfLines=1;noOfLines<=n;noOfLines++) {
