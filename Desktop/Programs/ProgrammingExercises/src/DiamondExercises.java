@@ -64,8 +64,7 @@ class DiamondExercises {
 
     }
 
-    void printCenteredDiamondWithName (int n) {
-        DiamondExercises deTemp=new DiamondExercises();
+    void printIsoscelesTriangleWithName (int n) {
         if (n<=0) {
             System.out.println("Invalid Input");
         }
@@ -83,7 +82,12 @@ class DiamondExercises {
             }
 
         System.out.println ("Deepika");
+    }
 
+    void printCenteredDiamondWithName (int n) {
+        DiamondExercises deTemp=new DiamondExercises();
+
+        deTemp.printIsoscelesTriangleWithName(n);
         deTemp.printDownwardIsoscelesTriangle(n-1);
     }
 
