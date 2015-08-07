@@ -22,12 +22,18 @@ class DiamondExercises {
       return n;
     }
 
-    void printIsoscelesTriangle (int n) {
-
-        if (n<=0) {
-            System.out.println("Invalid Input");
+    boolean validateN(int n) {
+        boolean validN=false;
+        if (n<1) {
+            System.out.println ("Invalid Input");
         }
         else
+            validN=true;
+    return validN;
+    }
+
+    void printIsoscelesTriangle (int n) {
+
         for (int noOfLines=1;noOfLines<=n;noOfLines++) {
 
             for (int noOfSpaces=n;noOfSpaces>noOfLines;noOfSpaces--) {
@@ -65,10 +71,6 @@ class DiamondExercises {
     }
 
     void printIsoscelesTriangleWithName (int n) {
-        if (n<=0) {
-            System.out.println("Invalid Input");
-        }
-        else
             for (int noOfLines=1;noOfLines<n;noOfLines++) {
 
                 for (int noOfSpaces=n;noOfSpaces>noOfLines;noOfSpaces--) {
@@ -93,17 +95,24 @@ class DiamondExercises {
 
     public static void main(String[] args) {
         DiamondExercises de1=new DiamondExercises();
+        boolean check;
 
         System.out.println ("\n------PRINTING ISOSCELES TRIANGLE OF ASTERISKS------\n");
         int n=de1.getValueOfN();
-        de1.printIsoscelesTriangle(n);
+        check=de1.validateN(n);
+        if (check)
+            de1.printIsoscelesTriangle(n);
 
         System.out.println ("\n------PRINTING CENTERED DIAMOND------\n");
         n=de1.getValueOfN();
-        de1.printCenteredDiamond(n);
+        check=de1.validateN(n);
+        if (check)
+            de1.printCenteredDiamond(n);
 
         System.out.println("\n------PRINTING CENTERED DIAMOND WITH NAME------\n");
         n=de1.getValueOfN();
-        de1.printCenteredDiamondWithName(n);
+        check=de1.validateN(n);
+        if (check)
+            de1.printCenteredDiamondWithName(n);
     }
 }

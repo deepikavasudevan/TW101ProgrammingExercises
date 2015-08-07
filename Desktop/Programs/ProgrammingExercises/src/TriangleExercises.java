@@ -28,12 +28,21 @@ class TriangleExercises {
         return n;
     }
 
-    void printHorizontalAsterisxs(int n) {
-        System.out.println("\n------PRINTING N ASTERISXS HORIZONTALLY------\n");
-        if (n<=0){
-            System.out.println("Invalid Input");
+    boolean validateN(int n) {
+
+        boolean validN=false;
+
+        if (n<=0) {
+            System.out.println ("Invalid Input");
         }
         else
+            validN=true;
+    return validN;
+    }
+
+    void printHorizontalAsterisxs(int n) {
+        System.out.println("\n------PRINTING N ASTERISXS HORIZONTALLY------\n");
+
         for (int noOfAsterisks=1;noOfAsterisks<=n;noOfAsterisks++) {
             System.out.print ("*");
         }
@@ -44,44 +53,41 @@ class TriangleExercises {
     void printVerticalAsterisks(int n) {
         System.out.println("\n------PRINTING N ASTERISKS VERTICALLY------\n");
 
-        if (n<=0) {
-            System.out.println("Invalid Input");
-        }
-        else {
             for (int noOfAsterisks=1;noOfAsterisks<=n;noOfAsterisks++) {
                 System.out.println ("*");
-            }
         }
     }
 
     void printRightAngledTriangleAsterisks(int n) {
         System.out.println ("\n------PRINTING RIGHT ANGLED TRIANGLE OF ASTERISKS------\n");
 
-        if (n<=0) {
-            System.out.println ("Invalid Input");
-        }
-        else {
             for (int noOfLines=1;noOfLines<=n;noOfLines++) {
                 for (int noOfAsterisks=1;noOfAsterisks<=noOfLines;noOfAsterisks++) {
                     System.out.print ("* ");
                 }
             System.out.println();
-            }
         }
     }
 
     public static void main(String[] args) throws IOException {
         TriangleExercises te1=new TriangleExercises();
+        boolean check;
 
         te1.printOneAsterisx();
 
         int n=te1.getNumberOfAsterisx();
-        te1.printHorizontalAsterisxs(n);
+        check=te1.validateN(n);
+        if (check)
+            te1.printHorizontalAsterisxs(n);
 
         n=te1.getNumberOfAsterisx();
-        te1.printVerticalAsterisks(n);
+        check=te1.validateN(n);
+        if (check)
+            te1.printVerticalAsterisks(n);
 
         n=te1.getNumberOfAsterisx();
-        te1.printRightAngledTriangleAsterisks(n);
+        check=te1.validateN(n);
+        if (check)
+            te1.printRightAngledTriangleAsterisks(n);
     }
 }
