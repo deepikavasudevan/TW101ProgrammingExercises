@@ -20,18 +20,18 @@ public class FizzBuzzExercise {
     void FizzBuzz() {
         FizzBuzzExercise fbeTemp=new FizzBuzzExercise();
 
-        for (int i=1;i<=100;i++)
+        for (int number=1;number<=100;number++)
         {
-            if ((fbeTemp.checkDivisibilityByThree(i)==1) && (fbeTemp.checkDivisibilityByFive(i)==1))
+            if ((fbeTemp.checkDivisibilityByThree(number)==1) && (fbeTemp.checkDivisibilityByFive(number)==1))
                 System.out.println("FizzBuzz");
             else
-            if (fbeTemp.checkDivisibilityByThree(i)==1)
+            if (fbeTemp.checkDivisibilityByThree(number)==1)
                 System.out.println("Fizz");
             else
-                if (fbeTemp.checkDivisibilityByFive(i)==1)
+                if (fbeTemp.checkDivisibilityByFive(number)==1)
                     System.out.println("Buzz");
                     else
-                        System.out.println(i);
+                        System.out.println(number);
         }
     }
 

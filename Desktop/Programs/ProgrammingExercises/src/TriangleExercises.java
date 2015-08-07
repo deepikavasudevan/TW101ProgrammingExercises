@@ -16,7 +16,7 @@ class TriangleExercises {
     int getNumberOfAsterisx() {
         int n=0;
 
-        System.out.println("\nEnter the number of asterisks to be printed");
+        System.out.println("\nEnter the value of N");
         try {
             BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
             n=Integer.parseInt(br.readLine());
@@ -34,7 +34,7 @@ class TriangleExercises {
             System.out.println("Invalid Input");
         }
         else
-        for (int i=1;i<=n;i++) {
+        for (int noOfAsterisks=1;noOfAsterisks<=n;noOfAsterisks++) {
             System.out.print ("*");
         }
 
@@ -48,7 +48,7 @@ class TriangleExercises {
             System.out.println("Invalid Input");
         }
         else {
-            for (int i=1;i<=n;i++) {
+            for (int noOfAsterisks=1;noOfAsterisks<=n;noOfAsterisks++) {
                 System.out.println ("*");
             }
         }
@@ -61,8 +61,8 @@ class TriangleExercises {
             System.out.println ("Invalid Input");
         }
         else {
-            for (int i=1;i<=n;i++) {
-                for (int j=1;j<=i;j++) {
+            for (int noOfLines=1;noOfLines<=n;noOfLines++) {
+                for (int noOfAsterisks=1;noOfAsterisks<=noOfLines;noOfAsterisks++) {
                     System.out.print ("* ");
                 }
             System.out.println();
