@@ -28,13 +28,13 @@ class DiamondExercises {
             System.out.println("Invalid Input");
         }
         else
-        for (int i=1;i<=n;i++) {
+        for (int noOfLines=1;noOfLines<=n;noOfLines++) {
 
-            for (int j=n;j>i;j--) {
+            for (int noOfSpaces=n;noOfSpaces>noOfLines;noOfSpaces--) {
                 System.out.print(" ");
             }
 
-            for (int k=1;k<=(2*i-1);k++) {
+            for (int noOfAsterisks=1;noOfAsterisks<=(2*noOfLines-1);noOfAsterisks++) {
                 System.out.print("*");
             }
         System.out.println();
@@ -43,12 +43,12 @@ class DiamondExercises {
 
     void printDownwardIsoscelesTriangle(int n) {
 
-        for (int i=n;i>=1;i--) {
-            for (int j=(n+1);j>i;j--) {
+        for (int noOfLines=n;noOfLines>=1;noOfLines--) {
+            for (int noOfSpaces=(n+1);noOfSpaces>noOfLines;noOfSpaces--) {
                 System.out.print(" ");
             }
 
-            for (int k=1; k<=(2*i-1); k++) {
+            for (int noOfAsterisks=1; noOfAsterisks<=(2*noOfLines-1); noOfAsterisks++) {
                 System.out.print("*");
             }
         System.out.println();
@@ -70,13 +70,13 @@ class DiamondExercises {
             System.out.println("Invalid Input");
         }
         else
-            for (int i=1;i<n;i++) {
+            for (int noOfLines=1;noOfLines<n;noOfLines++) {
 
-                for (int j=n;j>i;j--) {
+                for (int noOfSpaces=n;noOfSpaces>noOfLines;noOfSpaces--) {
                     System.out.print(" ");
                 }
 
-                for (int k=1;k<=(2*i-1);k++) {
+                for (int noOfAsterisks=1;noOfAsterisks<=(2*noOfLines-1);noOfAsterisks++) {
                     System.out.print("*");
                 }
                 System.out.println();
