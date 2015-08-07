@@ -28,12 +28,20 @@ class TriangleExercises {
         return n;
     }
 
+<<<<<<< HEAD
     boolean validateN(int n) {
 
         boolean validN=false;
 
         if (n<=0) {
             System.out.println ("Invalid Input");
+=======
+    void printHorizontalAsterisxs(int n) {
+        System.out.println("\n------PRINTING N ASTERISXS HORIZONTALLY------\n");
+        if (n<=0){
+            System.out.println("Invalid Input");
+            System.exit(0);
+>>>>>>> eb02ae832daeae9e98136ef7f89fd0e4d8577d2a
         }
         else
             validN=true;

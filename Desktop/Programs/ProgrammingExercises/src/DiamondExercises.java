@@ -22,10 +22,18 @@ class DiamondExercises {
       return n;
     }
 
+<<<<<<< HEAD
     boolean validateN(int n) {
         boolean validN=false;
         if (n<1) {
             System.out.println ("Invalid Input");
+=======
+    void printIsoscelesTriangle (int n) {
+
+        if (n<=0) {
+            System.out.println("Invalid Input");
+            System.exit(0);
+>>>>>>> eb02ae832daeae9e98136ef7f89fd0e4d8577d2a
         }
         else
             validN=true;
